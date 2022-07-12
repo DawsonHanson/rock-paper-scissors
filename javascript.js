@@ -30,8 +30,7 @@ console.log (typeof computerSelect)
 function playRound () {
   if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') {
     alert ('You won! Rock beats Scissors')
-  }
-  else if (playerSelection === 'ROCK' && computerSelection === 'PAPER') {
+  } else if (playerSelection === 'ROCK' && computerSelection === 'PAPER') {
     alert ('You lost! Paper beats Rock')
   } else if (playerSelection === 'PAPER' && computerSelection === 'ROCK') {
     alert ('You won! Paper beats Rock')
@@ -49,7 +48,14 @@ console.log (playRound())
 console.log (playerSelection)
 console.log (computerSelection)
 
-// output (message) if player won or lost round
 // function/ loop to play a max of 5 rounds
+
+function game () {
+  for (let score = 1; score < 5; score++) {
+
+  }
+}
+console.log (game())
+
 // output (message) if player won or lost game
 // function to restart game when finished
