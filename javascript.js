@@ -1,9 +1,8 @@
 console.log ('test!')
 
-const playerSelection = playerSelect()
-const computerSelection = computerSelect()
-console.log (typeof playerSelection)
-console.log (typeof computerSelection)
+let playerScore = 0
+let computerScore = 0
+let tie = 0
 
 // input (prompt) from player to pick rock, paper, scissors 
 
@@ -12,8 +11,6 @@ function playerSelect () {
   let answer = question.toUpperCase ()
   return answer;
 }
-console.log (typeof playerSelect)
-
 
 // function for computer to pick rock, paper, scissors at random 
 
@@ -23,39 +20,54 @@ function computerSelect () {
   let randomAnswer = array[randomArray];
   return randomAnswer;
 }
-console.log (typeof computerSelect)
 
 // function (if...elseif) to determine victor
 
 function playRound () {
+  const playerSelection = playerSelect()
+  const computerSelection = computerSelect()
+  console.log(computerSelection)
+  let answer = ''
   if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') {
-    alert ('You won! Rock beats Scissors')
+    console.log ('You won! Rock beats Scissors')
   } else if (playerSelection === 'ROCK' && computerSelection === 'PAPER') {
-    alert ('You lost! Paper beats Rock')
+    console.log ('You lost! Paper beats Rock')
   } else if (playerSelection === 'PAPER' && computerSelection === 'ROCK') {
-    alert ('You won! Paper beats Rock')
+    console.log ('You won! Paper beats Rock')
   } else if (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') {
-    alert ('You lost! Scissors beats Paper')
+    console.log ('You lost! Scissors beats Paper')
   } else if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') {
-    alert ('You won! Scissors beats Paper')
+    console.log ('You won! Scissors beats Paper')
   } else if (playerSelection === 'SCISSORS' && computerSelection === 'ROCK') {
-    alert ('You lose! Rock beats Scissors')
+    console.log ('You lost! Rock beats Scissors')
   } else {
-    alert ('Tie! no one wins')
+    console.log ('Tie! no one wins')
   }
+  return answer;
 }
-console.log (playRound())
-console.log (playerSelection)
-console.log (computerSelection)
 
 // function/ loop to play a max of 5 rounds
 
 function game () {
-  for (let score = 1; score < 5; score++) {
-
+  for (let x = 0; x < 5; x++) {
+    gameScore()
+    console.log (playerScore)
+    console.log (computerScore)
+    console.log (tie)
   }
 }
+
 console.log (game())
 
-// output (message) if player won or lost game
-// function to restart game when finished
+// function to keep score and display message once game is done
+
+function gameScore () {
+  let answer = (playRound());
+  if (answer === 'You won! Rock beats Scissors' || answer === 'You won! Paper beats Rock' || answer === 'You won! Scissors beats Paper') {
+    playerScore++;
+  } else if (answer === 'You lost! Paper beats Rock' || answer === 'You lost! Scissors beats Paper' || answer === 'You lost! Rock beats Scissors') {
+    computerScore++;
+  } else {
+    tie++;
+  } 
+}
