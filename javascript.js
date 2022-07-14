@@ -53,7 +53,7 @@ function playRound () {
   return answer;
 }
 
-// function/ loop to play a max of 5 rounds
+// function/ loop to play a game until player/computer reach 3 points
 
 function game () {
   for (let x = 0; x < 100; x++) {
