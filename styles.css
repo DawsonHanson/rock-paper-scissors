@@ -9,22 +9,29 @@ body {
   margin: 0%;
 }
 
+.center-item {
+  display: flex;
+  justify-content: center;
+}
+
 .header {
   font-size: 90px;
 }
 
-.header, .action {
+.fading-header {
+  font-size: 70px;
+  }  
+
+.header, .fading-header {
   text-align: center;
   color: darkred;
 }
 
-.action {
-font-size: 70px;
-}
-
-.arena-box {
+.animation-container {
   display: flex;
+  flex: auto;
   justify-content: space-evenly;
+  max-width: 1500px;
   padding: 160px;
   border: 2px solid black;
   background-color: aqua;
@@ -37,18 +44,21 @@ font-size: 70px;
   background-color: blueviolet;
 }
 
-.selections-box {
+.interface-container {
   flex: auto;
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
   margin-top: 60px;
   border: 2px solid black;
   background-color: darkcyan;
 }
 
-.score-box {
+.score-board-container {
   display: flex;
+  flex: auto;
   justify-content: space-evenly;
+  max-width: 900px;
   padding: 20px;
   border: 2px solid black;
   background-color: bisque;
@@ -62,17 +72,17 @@ font-size: 70px;
   border: 2px solid black;
 }
 
-.play-round {
+.play-round-button {
   width: 100px;
   height: 80px;
   border: 2px solid black;
   background-color: azure;
 }
 
-.buttons-box {
+.buttons-container {
   display: flex;
   flex: auto;
-  width: auto;
+  max-width: 834px;
   justify-content: space-evenly;
   border: 2px solid black;
 }
