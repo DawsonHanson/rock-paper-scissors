@@ -29,25 +29,18 @@ function playRound () {
   console.log(computerSelection)
   let answer = ''
   if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') {
-    console.log ('You won! Rock beats Scissors')
     answer = 'You won! Rock beats Scissors'
   } else if (playerSelection === 'ROCK' && computerSelection === 'PAPER') {
-    console.log ('You lost! Paper beats Rock')
     answer = 'You lost! Paper beats Rock'
   } else if (playerSelection === 'PAPER' && computerSelection === 'ROCK') {
-    console.log ('You won! Paper beats Rock')
     answer = 'You won! Paper beats Rock'
   } else if (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') {
-    console.log ('You lost! Scissors beats Paper')
     answer = 'You lost! Scissors beats Paper'
   } else if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') {
-    console.log ('You won! Scissors beats Paper')
     answer = 'You lost! Scissors beats Paper'
   } else if (playerSelection === 'SCISSORS' && computerSelection === 'ROCK') {
-    console.log ('You lost! Rock beats Scissors')
     answer = 'You lost! Scissors beats Paper'
   } else {
-    console.log ('Tie! no one wins')
     answer = 'Tie! no one wins'
   }
   return answer;
