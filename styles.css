@@ -1,39 +1,86 @@
-.header-box {
- 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0%;
+  margin: 0%;
+}
+
+.header {
+  font-size: 90px;
+}
+
+.header, .action {
+  text-align: center;
+  color: darkred;
 }
 
 .action {
-
+font-size: 70px;
 }
 
 .arena-box {
-
+  display: flex;
+  justify-content: space-evenly;
+  padding: 160px;
+  border: 2px solid black;
+  background-color: aqua;
 }
 
 .image-box {
-
+  padding: 80px;
+  margin: 0px 60px;
+  border: 2px solid black;
+  background-color: blueviolet;
 }
 
 .selections-box {
-
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  border: 2px solid black;
+  background-color: darkcyan;
 }
 
 .score-box {
-
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  border: 2px solid black;
+  background-color: bisque;
 }
 
 .score-counter-box {
-
+  padding: 5px;
+  /* width: auto; */
+  width: 130px;
+  height: 35px;
+  border: 2px solid black;
 }
 
 .play-round {
-
+  width: 100px;
+  height: 80px;
+  border: 2px solid black;
+  background-color: azure;
 }
 
 .buttons-box {
-
+  display: flex;
+  flex: auto;
+  width: auto;
+  justify-content: space-evenly;
+  border: 2px solid black;
 }
 
 .button {
-  
+  padding: 5px;
+  width: 88px;
+  text-align: center;
+  border: 2px solid black;
+  background-color: aquamarine;
 }
