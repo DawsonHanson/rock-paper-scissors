@@ -60,7 +60,7 @@ function game () {
   } 
 }
 
-console.log (game())
+console.log ()
 
 // function to keep score and display message once game is done
 
