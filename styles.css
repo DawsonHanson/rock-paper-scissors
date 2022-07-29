@@ -44,7 +44,8 @@ body {
 }
 
 .image-box {
-  padding: 100px 80px;
+  height: 200px;
+  width: 160px;
   margin: 0px 60px;
   background-color: blueviolet;
 }
@@ -64,11 +65,23 @@ body {
   margin: 14px 14px 5px;
 }
 
-.score-counter-box {
-  /* width: auto; */
+.score-counter-box-player {
+  justify-content: flex-end;
+}
+
+.score-counter-box-player, .score-counter-box-computer {
+  display: flex;
   width: 130px;
   height: 35px;
-  border: 2px solid blue;
+  border: 1px solid blue;
+}
+
+.score-counter-image {
+  height: 35px;
+  width: 35px;
+  /* image from url https://image.shutterstock.com/image-photo/stock-photo-skull-isolated-on-black-250nw-1271439208.jpg */
+  background: url(./skull.png) center no-repeat;
+  background-size: 35px 35px;
 }
 
 .play-round-button {
