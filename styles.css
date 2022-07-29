@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+html {
+  /* background image from url https://www.reddit.com/r/MortalKombat/comments/89ojy6/what_type_of_stages_would_you_like_to_see_in_mk11/ */
+  background: url(./background.png) bottom repeat-x black;
+  height: 894px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -15,16 +21,18 @@ body {
 }
 
 .header {
+  margin: 24px auto -17px;
   font-size: 90px;
+  color: rgb(139, 0, 0);
 }
 
 .fading-header {
   font-size: 70px;
+  color: rgb(168, 0, 0);
   }  
 
 .header, .fading-header {
   text-align: center;
-  color: darkred;
 }
 
 .animation-container {
@@ -32,26 +40,20 @@ body {
   flex: auto;
   justify-content: space-evenly;
   max-width: 1500px;
-  padding: 160px;
-  border: 2px solid black;
-  background-color: aqua;
+  margin: 254px 172px 154px;
 }
 
 .image-box {
-  padding: 80px;
+  padding: 100px 80px;
   margin: 0px 60px;
-  border: 2px solid black;
   background-color: blueviolet;
 }
 
 .interface-container {
-  flex: auto;
   display: flex;
+  flex: auto;
   flex-direction: column;
   max-width: 1000px;
-  margin-top: 60px;
-  border: 2px solid black;
-  background-color: darkcyan;
 }
 
 .score-board-container {
@@ -59,17 +61,14 @@ body {
   flex: auto;
   justify-content: space-evenly;
   max-width: 900px;
-  padding: 20px;
-  border: 2px solid black;
-  background-color: bisque;
+  margin: 14px;
 }
 
 .score-counter-box {
-  padding: 5px;
   /* width: auto; */
   width: 130px;
   height: 35px;
-  border: 2px solid black;
+  border: 2px solid blue;
 }
 
 .play-round-button {
@@ -82,9 +81,9 @@ body {
 .buttons-container {
   display: flex;
   flex: auto;
+  margin-bottom: 6px;
   max-width: 834px;
   justify-content: space-evenly;
-  border: 2px solid black;
 }
 
 .button {
