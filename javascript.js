@@ -1,18 +1,14 @@
-console.log ('test!')
-
 let computer;
 let player;
 let playerScore = 0
 let computerScore = 0
 let tie = 0
 
-
 // player input through buttons
 const buttons = document.querySelectorAll('.button')
 
 buttons.forEach(button => button.addEventListener('click', () => {
   player = Number(button.accessKey);
-  console.log(player)
 }))
 
 function computerInput() {
@@ -35,7 +31,6 @@ const playRoundButton = document.querySelector('.play-round-button')
 
 playRoundButton.addEventListener('click', () => {
     computerInput()
-    console.log(computer)
     playGame(playRound())
 })
 
@@ -73,7 +68,6 @@ function playRound() {
     header.textContent = 'Draw!'
     secondHeader.textContent = 'No One Wins'
   }
-  console.log(answer)
   return answer;
 }
 
@@ -96,14 +90,12 @@ function playGame(answer) {
   } 
 
   if (playerScore === 3) {
-    console.log ('Congratulations! You\'ve won!')
     header.textContent = 'Congratulations!'
     secondHeader.textContent = 'You\'ve won!'
     return;
   } 
 
   if (computerScore === 3) {
-    console.log ('Computer won the game! if only you were smarter')
     header.textContent = 'My Condolences'
     secondHeader.textContent = 'You\'ve Lost!'
     return;
