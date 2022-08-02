@@ -26,12 +26,12 @@ body {
   color: rgb(139, 0, 0);
 }
 
-.fading-header {
+.second-header {
   font-size: 70px;
   color: rgb(168, 0, 0);
   }  
 
-.header, .fading-header {
+.header, .second-header {
   text-align: center;
 }
 
@@ -73,7 +73,6 @@ body {
   display: flex;
   width: 130px;
   height: 35px;
-  border: 1px solid blue;
 }
 
 .score-counter-image {
@@ -101,7 +100,7 @@ body {
   max-width: 834px;
 }
 
-.button {
+.button{
   padding: 5px;
   width: 88px;
   border-radius: 8px;
@@ -111,4 +110,10 @@ body {
   background: url(./background.png) bottom 30% right;
   border: 2px solid rgb(104, 13, 13);
   color: rgb(32, 2, 2);
+}
+
+.button-click {
+  transition: .1s;
+  padding: 4px;
+  border: 3px solid orangered;
 }
