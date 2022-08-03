@@ -5,11 +5,30 @@ let computerScore = 0
 let tie = 0
 
 // player input through buttons
-const buttons = document.querySelectorAll('.button')
+const buttonRock = document.querySelector('.button-rock')
+const buttonPaper = document.querySelector('.button-paper')
+const buttonScissors = document.querySelector('.button-scissors')
 
-buttons.forEach(button => button.addEventListener('click', () => {
-  player = Number(button.accessKey);
-}))
+buttonRock.addEventListener('click', () => {
+  player = 1
+  buttonRock.classList.add('button-click')
+  buttonPaper.classList.remove('button-click')
+  buttonScissors.classList.remove('button-click')
+})
+
+buttonPaper.addEventListener('click', () => {
+  player = 2
+  buttonPaper.classList.add('button-click')
+  buttonRock.classList.remove('button-click')
+  buttonScissors.classList.remove('button-click')
+})
+
+buttonScissors.addEventListener('click', () => {
+  player = 3
+  buttonScissors.classList.add('button-click')
+  buttonRock.classList.remove('button-click')
+  buttonPaper.classList.remove('button-click')
+})
 
 function computerInput() {
   let randNum = Math.floor((Math.random() * 3) + 1)
@@ -40,31 +59,31 @@ const secondHeader = document.querySelector('.second-header')
 function playRound() {
   let answer = ''
   if (player == 1 && computer == 3) {
-    answer = 'Victory! Rock Beats Scissors'
+    answer = 'win'
     header.textContent = 'Victory!'
     secondHeader.textContent = 'Rock Beats Scissors'
   } else if (player == 1 && computer == 2) {
-    answer = 'Defeat! Paper Beats Rock'
+    answer = 'lose'
     header.textContent = 'Defeat!'
     secondHeader.textContent = 'Paper Beats Rock'
   } else if (player == 2 && computer == 1) {
-    answer = 'Victory! Paper Beats Rock'
+    answer = 'win'
     header.textContent = 'Victory!'
     secondHeader.textContent = 'Paper Beats Rock'
   } else if (player == 2 && computer == 3) {
-    answer = 'Defeat! Scissors Beats Paper'
+    answer = 'lose'
     header.textContent = 'Defeat!'
     secondHeader.textContent = 'Scissors Beats Paper'
   } else if (player == 3 && computer == 2) {
-    answer = 'Victory! Scissors Beats Paper'
+    answer = 'win'
     header.textContent = 'Victory!'
     secondHeader.textContent = 'Scissors Beats Paper'
   } else if (player == 3 && computer == 1) {
-    answer = 'Defeat! Rock Beats Scissors'
+    answer = 'lose'
     header.textContent = 'Defeat'
     secondHeader.textContent = 'Rock Beats Scissors'
   } else {
-    answer = 'Draw!'
+    answer = 'tie'
     header.textContent = 'Draw!'
     secondHeader.textContent = 'No One Wins'
   }
@@ -77,11 +96,11 @@ function playGame(answer) {
   const computerCounter = document.querySelector('.score-counter-box-computer')
   const addImage = document.createElement('div')
 
-  if (answer === 'Victory! Rock Beats Scissors' || answer === 'Victory! Paper Beats Rock' || answer === 'Victory! Scissors Beats Paper') {
+  if (answer === 'win') {
     playerScore++;
     addImage.classList.add('score-counter-image')
     computerCounter.appendChild(addImage)
-  } else if (answer === 'Defeat! Paper Beats Rock' || answer === 'Defeat! Scissors Beats Paper' || answer === 'Defeat! Rock Beats Scissors') {
+  } else if (answer === 'lose') {
     computerScore++;
     addImage.classList.add('score-counter-image')
     playerCounter.appendChild(addImage)

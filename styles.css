@@ -100,7 +100,7 @@ body {
   max-width: 834px;
 }
 
-.button{
+.button-rock, .button-paper, .button-scissors{
   padding: 5px;
   width: 88px;
   border-radius: 8px;
