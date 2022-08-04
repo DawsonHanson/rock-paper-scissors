@@ -33,6 +33,12 @@ body {
 
 .header, .second-header {
   text-align: center;
+  opacity: 1; 
+  transition: all 0.3s;
+}
+
+.hide-header {
+  opacity: 0;
 }
 
 .animation-container {

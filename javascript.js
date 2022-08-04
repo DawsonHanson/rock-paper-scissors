@@ -60,32 +60,88 @@ function playRound() {
   let answer = ''
   if (player == 1 && computer == 3) {
     answer = 'win'
-    header.textContent = 'Victory!'
-    secondHeader.textContent = 'Rock Beats Scissors'
+    header.classList.add('hide-header')
+    secondHeader.classList.add('hide-header')
+    setTimeout(() => {
+      header.textContent = 'Victory!'
+      secondHeader.textContent = 'Rock Beats Scissors'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
   } else if (player == 1 && computer == 2) {
     answer = 'lose'
-    header.textContent = 'Defeat!'
-    secondHeader.textContent = 'Paper Beats Rock'
+    header.classList.add('hide-header')
+    secondHeader.classList.add('hide-header')
+    setTimeout(() => {
+      header.textContent = 'Defeat!'
+      secondHeader.textContent = 'Paper Beats Rock'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
   } else if (player == 2 && computer == 1) {
     answer = 'win'
-    header.textContent = 'Victory!'
-    secondHeader.textContent = 'Paper Beats Rock'
+    header.classList.add('hide-header')
+    secondHeader.classList.add('hide-header')
+    setTimeout(() => {
+      header.textContent = 'Victory!'
+      secondHeader.textContent = 'Paper Beats Rock'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
   } else if (player == 2 && computer == 3) {
     answer = 'lose'
-    header.textContent = 'Defeat!'
-    secondHeader.textContent = 'Scissors Beats Paper'
+    header.classList.add('hide-header')
+    secondHeader.classList.add('hide-header')
+    setTimeout(() => {
+      header.textContent = 'Defeat!'
+      secondHeader.textContent = 'Scissors Beats Paper'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
   } else if (player == 3 && computer == 2) {
     answer = 'win'
-    header.textContent = 'Victory!'
-    secondHeader.textContent = 'Scissors Beats Paper'
+    header.classList.add('hide-header')
+    secondHeader.classList.add('hide-header')
+    setTimeout(() => {
+      header.textContent = 'Victory!'
+      secondHeader.textContent = 'Scissors Beats Paper'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
   } else if (player == 3 && computer == 1) {
     answer = 'lose'
-    header.textContent = 'Defeat'
-    secondHeader.textContent = 'Rock Beats Scissors'
+    header.classList.add('hide-header')
+    secondHeader.classList.add('hide-header')
+    setTimeout(() => {
+      header.textContent = 'Defeat'
+      secondHeader.textContent = 'Rock Beats Scissors'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
   } else {
     answer = 'tie'
-    header.textContent = 'Draw!'
-    secondHeader.textContent = 'No One Wins'
+    header.classList.add('hide-header')
+    secondHeader.classList.add('hide-header')
+    setTimeout(() => {
+      header.textContent = 'Draw!'
+      secondHeader.textContent = 'No One Wins'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
   }
   return answer;
 }
@@ -109,14 +165,26 @@ function playGame(answer) {
   } 
 
   if (playerScore === 3) {
-    header.textContent = 'Congratulations!'
-    secondHeader.textContent = 'You\'ve won!'
+    setTimeout(() => {
+      header.textContent = 'Congratulations!'
+      secondHeader.textContent = 'You\'ve won!'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
     return;
   } 
 
   if (computerScore === 3) {
-    header.textContent = 'My Condolences'
-    secondHeader.textContent = 'You\'ve Lost!'
+    setTimeout(() => {
+      header.textContent = 'My Condolences'
+      secondHeader.textContent = 'You\'ve Lost!'
+    }, 300)
+    setTimeout(() => {
+      header.classList.remove('hide-header')
+      secondHeader.classList.remove('hide-header')
+    }, 300)
     return;
   } 
 }
