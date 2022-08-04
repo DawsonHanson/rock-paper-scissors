@@ -51,6 +51,10 @@ const playRoundButton = document.querySelector('.play-round-button')
 playRoundButton.addEventListener('click', () => {
     computerInput()
     playGame(playRound())
+    playRoundButton.classList.add('button-click')
+    setTimeout(() => {
+      playRoundButton.classList.remove('button-click')
+    }, 500)
 })
 
 const header = document.querySelector('.header')
@@ -173,6 +177,9 @@ function playGame(answer) {
       header.classList.remove('hide-header')
       secondHeader.classList.remove('hide-header')
     }, 300)
+    setTimeout(() => {
+      location.reload()
+    }, 2200)
     return;
   } 
 
@@ -185,6 +192,9 @@ function playGame(answer) {
       header.classList.remove('hide-header')
       secondHeader.classList.remove('hide-header')
     }, 300)
+    setTimeout(() => {
+      location.reload()
+    }, 2200)
     return;
   } 
 }
