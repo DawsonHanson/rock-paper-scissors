@@ -167,15 +167,29 @@ function playGame(answer) {
   const playerCounter = document.querySelector('.score-counter-box-player')
   const computerCounter = document.querySelector('.score-counter-box-computer')
   const addImage = document.createElement('div')
-
+  const addSlash = document.createElement('div')
   if (answer === 'win') {
     playerScore++;
     addImage.classList.add('score-counter-image')
     computerCounter.appendChild(addImage)
+    setTimeout(() => {
+      addSlash.classList.add('image-slash')
+      imageBoxComputer.appendChild(addSlash)
+    }, 360)
+    setTimeout(() => {
+      addSlash.classList.remove('image-slash')
+    }, 680)
   } else if (answer === 'lose') {
     computerScore++;
     addImage.classList.add('score-counter-image')
     playerCounter.appendChild(addImage)
+    setTimeout(() => {
+      addSlash.classList.add('image-slash')
+      imageBoxPlayer.appendChild(addSlash)
+    }, 360)
+    setTimeout(() => {
+      addSlash.classList.remove('image-slash')
+    }, 680)
   } else {
     tie++;
   } 

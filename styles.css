@@ -154,3 +154,11 @@ body {
   background: url(./scissors.png) center no-repeat;
   background-size: 190px 250px;
 }
+
+.image-slash {
+  /* https://cdn.pixabay.com/photo/2013/07/12/16/23/slash-150808__340.png */
+  background: url(./slash.png) center no-repeat;
+  background-size: 190px 250px;
+  height: 250px;
+  width: 190px;
+}
