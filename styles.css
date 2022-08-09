@@ -3,7 +3,7 @@
 }
 
 html {
-  /* background image from url https://www.reddit.com/r/MortalKombat/comments/89ojy6/what_type_of_stages_would_you_like_to_see_in_mk11/ */
+  /* image from https://www.reddit.com/r/MortalKombat/comments/89ojy6/what_type_of_stages_would_you_like_to_see_in_mk11/ */
   background: url(./background.png) bottom repeat-x black;
   height: 894px;
 }
@@ -46,14 +46,16 @@ body {
   flex: auto;
   justify-content: space-evenly;
   max-width: 1500px;
-  margin: 254px 172px 154px;
+  margin: 254px 172px 106px;
 }
 
-.image-box {
-  height: 200px;
-  width: 160px;
+.image-box-player, .image-box-computer {
+  /* image from https://cdn.pixabay.com/photo/2013/07/12/16/23/interrogation-point-150807__340.png */
+  background: url(./question-mark.png) center no-repeat;
+  background-size: 190px 250px;
+  height: 250px;
+  width: 190px;
   margin: 0px 60px;
-  background-color: blueviolet;
 }
 
 .interface-container {
@@ -84,7 +86,7 @@ body {
 .score-counter-image {
   height: 35px;
   width: 35px;
-  /* image from url https://image.shutterstock.com/image-photo/stock-photo-skull-isolated-on-black-250nw-1271439208.jpg */
+  /* image from https://image.shutterstock.com/image-photo/stock-photo-skull-isolated-on-black-250nw-1271439208.jpg */
   background: url(./skull.png) center no-repeat;
   background-size: 35px 35px;
 }
@@ -122,4 +124,22 @@ body {
   transition: .1s;
   padding: 4px;
   border: 3px solid orangered;
+}
+
+.image-rock {
+  /* image from https://cdn.pixabay.com/photo/2020/01/29/19/04/rock-4803349__340.png */
+  background: url(./rock.png) center no-repeat;
+  background-size: 190px 250px;
+}
+
+.image-paper {
+  /* image from https://cdn.pixabay.com/photo/2016/10/23/15/47/paper-1763262__340.png */
+  background: url(./paper.png) center no-repeat;
+  background-size: 190px 250px;
+}
+
+.image-scissors {
+  /* image from https://cdn.pixabay.com/photo/2017/04/20/14/37/vectorel-scissors-2245884__340.png */
+  background: url(./scissors.png) center no-repeat;
+  background-size: 190px 250px;
 }

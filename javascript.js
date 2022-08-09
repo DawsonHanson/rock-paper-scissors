@@ -51,6 +51,7 @@ const playRoundButton = document.querySelector('.play-round-button')
 playRoundButton.addEventListener('click', () => {
     computerInput()
     playGame(playRound())
+    imageSelect()
     playRoundButton.classList.add('button-click')
     setTimeout(() => {
       playRoundButton.classList.remove('button-click')
@@ -197,4 +198,45 @@ function playGame(answer) {
     }, 2200)
     return;
   } 
+}
+
+imageBoxPlayer = document.querySelector('.image-box-player')
+imageBoxComputer = document.querySelector('.image-box-computer')
+
+function imageSelect() {
+  if (player == 1) {
+    imageBoxPlayer.classList.add('image-rock')
+    imageBoxPlayer.classList.remove('image-paper')
+    imageBoxPlayer.classList.remove('image-scissors')
+  } 
+  
+  if (player == 2) {
+    imageBoxPlayer.classList.add('image-paper')
+    imageBoxPlayer.classList.remove('image-rock')
+    imageBoxPlayer.classList.remove('image-scissors')
+  }
+  
+  if (player == 3) {
+    imageBoxPlayer.classList.add('image-scissors')
+    imageBoxPlayer.classList.remove('image-paper')
+    imageBoxPlayer.classList.remove('image-rock')
+  } 
+  
+  if (computer == 1) {
+    imageBoxComputer.classList.add('image-rock')
+    imageBoxComputer.classList.remove('image-paper')
+    imageBoxComputer.classList.remove('image-scissors')
+  }
+  
+  if (computer == 2) {
+    imageBoxComputer.classList.add('image-paper')
+    imageBoxComputer.classList.remove('image-rock')
+    imageBoxComputer.classList.remove('image-scissors')
+  } 
+  
+  if (computer == 3) {
+    imageBoxComputer.classList.add('image-scissors')
+    imageBoxComputer.classList.remove('image-paper')
+    imageBoxComputer.classList.remove('image-rock')
+  }
 }
