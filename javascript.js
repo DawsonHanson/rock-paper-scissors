@@ -47,6 +47,7 @@ function computerInput() {
 }
 
 const playRoundButton = document.querySelector('.play-round-button')
+const animationContainer = document.querySelector('.animation-container')
 
 playRoundButton.addEventListener('click', () => {
     computerInput()
@@ -56,6 +57,16 @@ playRoundButton.addEventListener('click', () => {
     setTimeout(() => {
       playRoundButton.classList.remove('button-click')
     }, 500)
+    setTimeout(() => {
+      animationContainer.classList.add('image-animation-container')
+      imageBoxPlayer.classList.add('image-animation')
+      imageBoxComputer.classList.add('image-animation')
+    }, 325)
+    setTimeout(() => {
+      animationContainer.classList.remove('image-animation-container')
+      imageBoxPlayer.classList.remove('image-animation')
+      imageBoxComputer.classList.remove('image-animation')
+    }, 450)
 })
 
 const header = document.querySelector('.header')
@@ -200,8 +211,8 @@ function playGame(answer) {
   } 
 }
 
-imageBoxPlayer = document.querySelector('.image-box-player')
-imageBoxComputer = document.querySelector('.image-box-computer')
+const imageBoxPlayer = document.querySelector('.image-box-player')
+const imageBoxComputer = document.querySelector('.image-box-computer')
 
 function imageSelect() {
   if (player == 1) {
